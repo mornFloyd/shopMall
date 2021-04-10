@@ -1,26 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <router-view v-slot='{Component}'>
+    <keep-alive include='Home,ShopCart'>
+      <component :is='Component'/>
+    </keep-alive>
+  </router-view>
+  <mian-tab-bar></mian-tab-bar>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import MianTabBar from 'components/content/MianTabBar'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MianTabBar
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+ @import 'assets/css/base.css';
 </style>

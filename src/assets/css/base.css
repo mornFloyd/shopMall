@@ -1,0 +1,58 @@
+/**
+ * base.css - 航洋无声
+ * mail -  hangyangws@foxmail.com
+ * weibo - http://weibo.com/512jj
+ */
+ @import './normalize.css';
+
+:root {
+  /* 文本颜色 */
+  --color-text: #666;
+  /*高亮时的颜色*/
+  --color-high-text: #ff5777;
+  /* 色调 */
+  --color-tint: #ff8198;
+  --color-background: #fff;
+  --font--size: 14px;
+  --line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  width: 100vm;
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.clear-fix::after {
+  clear: both;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.clear-fix {
+  zoom: 1;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
